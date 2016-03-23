@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $("form").submit(function ourFunction(bunny) {
+  $("#blanks form").submit(function ourFunction(bunny) {
     var person1Input = $("input#person1").val();
     var person2Input = $("input#person2").val();
     var animalInput= $("input#animal").val();
@@ -17,5 +17,17 @@ $(document).ready(function() {
     $("#story").show();
 
     bunny.preventDefault();
+  });
+});
+
+$(document).ready(function() {
+  $("#freeLetter form").submit(function thisFunction(hop) {
+    var ourfreeletter = $("input#userName").val();
+
+    $(".userName").text(ourfreeletter);
+
+    $("#newstory").show();
+
+    hop.preventDefault();
   });
 });
