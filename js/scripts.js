@@ -18,9 +18,8 @@ $(document).ready(function() {
 
     bunny.preventDefault();
   });
-});
 
-$(document).ready(function() {
+
   $("#freeLetter form").submit(function thisFunction(hop) {
     var ourfreeletter = $("input#userName").val();
 
@@ -30,4 +29,14 @@ $(document).ready(function() {
 
     hop.preventDefault();
   });
+
+    $("#typeSMT form").submit(function(jump) {
+      var allcapstext = $("input#typeStuff").val();
+
+      $(".typeStuff").text(allcapstext.toUpperCase());
+
+      $("#allcaps").show();
+
+      jump.preventDefault();
+    });
 });
